@@ -45,19 +45,48 @@
 }
 
 
-
-
 @media only screen and(max-width:768px){
   .projects ul li, .projects ul li.projects__reversed-list{
     flex-direction: column;
+    gap: 2rem;
   }
+  
 
   .projects ul li .projects__info{
-    max-width: 66rem;
+    max-width: 90%;
+    text-align: center;
   }
 
   .projects ul li .image img{
     min-width: auto;
+    max-width: 100%;
   }
-  
+
+  .projects ul li:not(:last-of-type){
+    margin-bottom: 8rem;
+  }
+
 }
+
+@media only screen and (max-width: 480px) {
+  .projects {
+    margin-bottom: 8rem;
+    scroll-margin-top: 10rem;
+  }
+
+  .projects ul li{
+    gap: 1rem;
+  }
+
+  .projects ul li .projects__info{
+    max-width: 100%;
+  }
+
+  .projects ul li .projects__info p{
+    margin: 1rem 0 2rem;
+  }
+
+  .projects	ul li .image img{
+    min-width: auto;
+    max-width: 100%;
+  }
